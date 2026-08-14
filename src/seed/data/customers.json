@@ -1,0 +1,14 @@
+{
+  "arabic": {
+    "first": ["Ahmed", "Mohammed", "Khalid", "Abdullah", "Faisal", "Omar", "Saeed", "Sultan", "Fatima", "Noura", "Maryam", "Aisha", "Layla", "Hessa", "Salma", "Reem", "Hind", "Amal", "Yousef", "Hamad"],
+    "last": ["Al Rashid", "Al Maktoum", "Al Saud", "Al Thani", "Al Nahyan", "Al Qasimi", "Al Falasi", "Al Zaabi", "Al Suwaidi", "Al Ghamdi", "Al Otaibi", "Al Harbi", "Al Dosari", "Al Shamsi", "Al Mansoori"]
+  },
+  "southAsian": {
+    "first": ["Rajesh", "Priya", "Arjun", "Deepika", "Amit", "Sneha", "Vikram", "Anjali", "Suresh", "Kavita", "Rahul", "Pooja", "Sanjay", "Neha", "Imran", "Ayesha", "Farhan", "Zainab", "Nadeem", "Sadia"],
+    "last": ["Kumar", "Sharma", "Patel", "Nair", "Singh", "Reddy", "Gupta", "Khan", "Iqbal", "Ahmed", "Malik", "Chaudhry", "Rao", "Menon", "Verma"]
+  },
+  "western": {
+    "first": ["James", "Sarah", "David", "Emily", "Michael", "Jessica", "Robert", "Laura", "William", "Emma", "John", "Olivia"],
+    "last": ["Wilson", "Mitchell", "Brown", "Taylor", "Anderson", "Thomas", "Clark", "Walker", "Harris", "Lewis"]
+  }
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "type": "cod",
+    "severity": "critical",
+    "title": "COD Rejection Spike in Riyadh",
+    "description": "COD rejections in Riyadh have climbed well above the network average over the last 30 days, driven mostly by high-value orders where customers change their mind before the courier arrives.",
+    "metric": "38% COD rejection rate (vs 22% average)",
+    "recommendation": "Consider requiring phone verification for COD orders above SAR 300 in Riyadh, or offer a 5% prepaid discount.",
+    "dataPoints": { "city": "Riyadh", "rejectionRate": 0.38, "networkAverage": 0.22 }
+  },
+  {
+    "type": "inventory",
+    "severity": "warning",
+    "title": "Inventory Mismatch on 5 Products",
+    "description": "5 SKUs currently show different stock counts across Noon, Amazon, and Shopify compared to the physical warehouse count, creating overselling and lost-sale risk.",
+    "metric": "5 SKUs showing different stock across channels",
+    "recommendation": "Sync inventory immediately — 2 products are at overselling risk on Shopify.",
+    "dataPoints": { "mismatchedSkus": 5, "oversellRisk": 2 }
+  },
+  {
+    "type": "revenue",
+    "severity": "opportunity",
+    "title": "Abu Dhabi Conversion Rate is 2x Dubai",
+    "description": "Traffic converts to paid orders at a notably higher rate in Abu Dhabi than in Dubai, suggesting an underexploited pocket of demand.",
+    "metric": "4.2% conversion vs 2.1% in Dubai",
+    "recommendation": "Increase ad spend in Abu Dhabi by 30% — higher ROI potential.",
+    "dataPoints": { "abuDhabiConversion": 0.042, "dubaiConversion": 0.021 }
+  },
+  {
+    "type": "revenue",
+    "severity": "info",
+    "title": "Tabby BNPL Orders Have 45% Higher AOV",
+    "description": "Orders paid via Tabby's buy-now-pay-later option carry a significantly larger basket size than the store average.",
+    "metric": "Average order SAR 487 (Tabby) vs SAR 336 (overall)",
+    "recommendation": "Promote the Tabby payment option more prominently on product pages.",
+    "dataPoints": { "tabbyAov": 487, "overallAov": 336 }
+  },
+  {
+    "type": "returns",
+    "severity": "warning",
+    "title": "Electronics Return Rate at 18%",
+    "description": "The Electronics category returns at more than double the store-wide average, primarily due to sizing/compatibility confusion and unmet expectations.",
+    "metric": "18% return rate (vs 8% average across categories)",
+    "recommendation": "Add size comparison charts and video reviews for electronics products.",
+    "dataPoints": { "electronicsReturnRate": 0.18, "averageReturnRate": 0.08 }
+  },
+  {
+    "type": "revenue",
+    "severity": "opportunity",
+    "title": "Friday-Saturday Sales Drop 35%",
+    "description": "Revenue consistently dips over the Gulf weekend (Friday-Saturday) compared to weekday performance, indicating a scheduling gap in promotions.",
+    "metric": "Weekend revenue SAR 8,200/day vs SAR 12,600/day weekdays",
+    "recommendation": "Launch a 'Weekend Special' promotion targeting Friday 2-6 PM.",
+    "dataPoints": { "weekendRevenue": 8200, "weekdayRevenue": 12600 }
+  },
+  {
+    "type": "delivery",
+    "severity": "critical",
+    "title": "Fetchr Delivery Failure Rate at 14%",
+    "description": "Fetchr's failed-delivery rate is running well above other courier partners, disproportionately affecting Riyadh routes.",
+    "metric": "14% failed deliveries (vs 6% Aramex, 8% SMSA)",
+    "recommendation": "Review the Fetchr SLA — consider shifting Riyadh orders to SMSA.",
+    "dataPoints": { "fetchrFailureRate": 0.14, "aramexFailureRate": 0.06, "smsaFailureRate": 0.08 }
+  },
+  {
+    "type": "product",
+    "severity": "info",
+    "title": "Beauty Category Growing 28% MoM",
+    "description": "The Beauty & Personal Care category is compounding month-over-month, outpacing every other category in growth rate.",
+    "metric": "SAR 42,000 → SAR 53,760 in last month",
+    "recommendation": "Expand the beauty product range — high demand, low return rate (3%).",
+    "dataPoints": { "previousMonth": 42000, "currentMonth": 53760, "growthPercent": 0.28 }
+  },
+  {
+    "type": "inventory",
+    "severity": "warning",
+    "title": "3 Products Below Reorder Level",
+    "description": "Three fast-moving SKUs are projected to stock out within days at the current sales velocity.",
+    "metric": "Wireless Earbuds, Phone Cases, USB Cables — 5 days of stock left",
+    "recommendation": "Place a reorder immediately — these products account for 15% of revenue.",
+    "dataPoints": { "daysOfStockLeft": 5, "revenueShare": 0.15 }
+  },
+  {
+    "type": "product",
+    "severity": "opportunity",
+    "title": "Noon Outperforming Amazon in Fashion",
+    "description": "Fashion & Apparel products are converting noticeably better on Noon than on Amazon.ae, with wider selection producing outsized returns.",
+    "metric": "Noon fashion revenue SAR 67,000 vs Amazon SAR 31,000",
+    "recommendation": "List 5 more fashion products on Noon — higher demand and better margins.",
+    "dataPoints": { "noonRevenue": 67000, "amazonRevenue": 31000 }
+  },
+  {
+    "type": "revenue",
+    "severity": "info",
+    "title": "Peak Ordering Hours: 9-11 PM",
+    "description": "Nearly a third of all daily orders land in a two-hour window in the evening, well after typical business-hours marketing pushes.",
+    "metric": "32% of daily orders placed between 9-11 PM GST",
+    "recommendation": "Schedule marketing emails and push notifications for 8:30 PM.",
+    "dataPoints": { "peakWindowShare": 0.32, "peakStart": "21:00", "peakEnd": "23:00" }
+  },
+  {
+    "type": "delivery",
+    "severity": "warning",
+    "title": "Shipping Cost Eating 12% of Revenue",
+    "description": "Shipping spend has crept up to a significant share of monthly revenue, driven by current per-shipment courier rates.",
+    "metric": "SAR 41,108 spent on shipping this month",
+    "recommendation": "Negotiate a volume discount with Aramex — current volume qualifies for a 15% reduction.",
+    "dataPoints": { "shippingSpend": 41108, "revenueShare": 0.12 }
+  },
+  {
+    "type": "product",
+    "severity": "opportunity",
+    "title": "Arabic Product Listings Convert 23% Better",
+    "description": "Listings with a complete Arabic description meaningfully outconvert English-only listings across all three channels.",
+    "metric": "Products with Arabic descriptions: 3.8% conversion vs 3.1% English-only",
+    "recommendation": "Use the AI Content Generator to create Arabic descriptions for the remaining 34 products.",
+    "dataPoints": { "arabicConversion": 0.038, "englishOnlyConversion": 0.031, "productsMissingArabic": 34 }
+  },
+  {
+    "type": "revenue",
+    "severity": "critical",
+    "title": "Duplicate Orders Detected",
+    "description": "Several orders this week share the same customer, items, and a sub-hour time window — a strong signal of accidental duplicate checkouts.",
+    "metric": "7 potential duplicate orders this week (same customer, same items, within 1 hour)",
+    "recommendation": "Enable duplicate order detection — estimated SAR 4,200 in prevented losses.",
+    "dataPoints": { "duplicateOrders": 7, "estimatedSavings": 4200 }
+  },
+  {
+    "type": "revenue",
+    "severity": "info",
+    "title": "Customer Retention: 22% Repeat Buyers",
+    "description": "About one in five customers returns to place a second order within two months of their first purchase.",
+    "metric": "1 in 5 customers orders again within 60 days",
+    "recommendation": "Launch a loyalty program targeting repeat buyers — they spend 40% more per order.",
+    "dataPoints": { "repeatBuyerRate": 0.22, "windowDays": 60, "spendUplift": 0.4 }
+  }
+]

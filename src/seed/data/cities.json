@@ -1,0 +1,11 @@
+[
+  { "name": "Dubai", "country": "UAE", "weight": 0.30 },
+  { "name": "Abu Dhabi", "country": "UAE", "weight": 0.15 },
+  { "name": "Sharjah", "country": "UAE", "weight": 0.05 },
+  { "name": "Ajman", "country": "UAE", "weight": 0.03 },
+  { "name": "RAK", "country": "UAE", "weight": 0.02 },
+  { "name": "Riyadh", "country": "KSA", "weight": 0.25 },
+  { "name": "Jeddah", "country": "KSA", "weight": 0.12 },
+  { "name": "Dammam", "country": "KSA", "weight": 0.05 },
+  { "name": "Makkah", "country": "KSA", "weight": 0.03 }
+]
