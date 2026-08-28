@@ -9,7 +9,7 @@ import { Eye, EyeOff, LoaderCircle, Languages, Mail, Lock, Sparkles } from "luci
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { APP_NAME, APP_TAGLINE, DEMO_USER_EMAIL } from "@/lib/constants";
+import { APP_NAME, APP_TAGLINE, DEMO_USER_EMAIL, DEMO_USER_PASSWORD } from "@/lib/constants";
 import { useLocale } from "@/components/providers/LocaleContext";
 
 export default function LoginPage() {
@@ -157,7 +157,7 @@ function LoginForm() {
               </p>
 
               <p className="text-center text-xs text-muted-foreground">
-                {t("login.demoHint")}: {DEMO_USER_EMAIL}
+                {t("login.demoHint")}: {DEMO_USER_EMAIL} / {DEMO_USER_PASSWORD}
               </p>
             </form>
           </div>

@@ -104,7 +104,7 @@ export const INSIGHT_SEVERITIES = ["info", "warning", "critical", "opportunity"]
 export const USER_ROLES = ["admin", "viewer"] as const;
 
 export const DEMO_USER_EMAIL = "demo@gulfsync.com";
-export const DEMO_USER_PASSWORD = "GulfSync@2026!";
+export const DEMO_USER_PASSWORD = "GulfSync@2026";
 
 export const AI_MAX_TOKENS = 1200;
 export const AI_INPUT_MAX_LENGTH = 500;
