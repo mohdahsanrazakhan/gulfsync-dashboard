@@ -156,9 +156,11 @@ function LoginForm() {
                 </Link>
               </p>
 
-              <p className="text-center text-xs text-muted-foreground">
-                {t("login.demoHint")}: {DEMO_USER_EMAIL} / {DEMO_USER_PASSWORD}
-              </p>
+              <div className="rounded-lg border bg-muted/30 px-4 py-3 text-sm">
+                <p className="font-semibold text-foreground">{t("login.demoHint")}</p>
+                <p className="mt-1 text-muted-foreground">Email: {DEMO_USER_EMAIL}</p>
+                <p className="text-muted-foreground">Password: {DEMO_USER_PASSWORD}</p>
+              </div>
             </form>
           </div>
         </div>

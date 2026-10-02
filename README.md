@@ -41,7 +41,7 @@ Open https://gulfsync.mohdahsanrazakhan.com and log in with:
 
 ```
 Email:    demo@gulfsync.com
-Password: GulfSync@2026!
+Password: GulfSync@2026
 ```
 
 ### Environment Variables
