@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import {
   LayoutDashboard,
   Package,
@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { APP_NAME } from "@/lib/constants";
 import { useLocale } from "@/components/providers/LocaleContext";
+import { LogoutDialog } from "@/components/layout/LogoutDialog";
 
 const NAV_ITEMS = [
   { href: "/dashboard", key: "nav.overview", icon: LayoutDashboard },
@@ -33,6 +34,7 @@ const NAV_ITEMS = [
 
 export function Sidebar({ collapsed: collapsedProp }: { collapsed?: boolean }) {
   const [internalCollapsed, setInternalCollapsed] = useState(false);
+  const [logoutOpen, setLogoutOpen] = useState(false);
   const collapsed = collapsedProp ?? internalCollapsed;
   const pathname = usePathname();
   const { data: session } = useSession();
@@ -112,7 +114,7 @@ export function Sidebar({ collapsed: collapsedProp }: { collapsed?: boolean }) {
           )}
         </div>
         <button
-          onClick={() => signOut({ callbackUrl: "/login" })}
+          onClick={() => setLogoutOpen(true)}
           className={cn(
             "mt-3 flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
             collapsed && "justify-center px-0"
@@ -122,6 +124,8 @@ export function Sidebar({ collapsed: collapsedProp }: { collapsed?: boolean }) {
           {!collapsed && <span>{t("nav.logout")}</span>}
         </button>
       </div>
+
+      <LogoutDialog open={logoutOpen} onOpenChange={setLogoutOpen} />
     </aside>
   );
 }

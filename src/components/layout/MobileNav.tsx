@@ -3,13 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { signOut } from "next-auth/react";
 import { LayoutDashboard, Package, ClipboardList, LineChart, Sparkles, PenSquare, Settings, LogOut, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { APP_NAME } from "@/lib/constants";
 import { useLocale } from "@/components/providers/LocaleContext";
+import { LogoutDialog } from "@/components/layout/LogoutDialog";
 import { useState } from "react";
 
 const NAV_ITEMS = [
@@ -27,6 +27,7 @@ const MENU_ONLY_ITEMS = [
 
 export function MobileNavTrigger() {
   const [open, setOpen] = useState(false);
+  const [logoutOpen, setLogoutOpen] = useState(false);
   const pathname = usePathname();
   const { t, dir } = useLocale();
 
@@ -66,7 +67,10 @@ export function MobileNavTrigger() {
             );
           })}
           <button
-            onClick={() => signOut({ callbackUrl: "/login" })}
+            onClick={() => {
+              setOpen(false);
+              setLogoutOpen(true);
+            }}
             className="mt-2 flex items-center gap-3 rounded-md px-3 py-2 text-left text-sm font-medium text-sidebar-foreground/80 hover:bg-sidebar-accent"
           >
             <LogOut className="h-4 w-4" />
@@ -74,6 +78,8 @@ export function MobileNavTrigger() {
           </button>
         </nav>
       </SheetContent>
+
+      <LogoutDialog open={logoutOpen} onOpenChange={setLogoutOpen} />
     </Sheet>
   );
 }
