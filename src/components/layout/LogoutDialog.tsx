@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { signOut } from "next-auth/react";
-import { LoaderCircle } from "lucide-react";
+import { LoaderCircle, LogOut } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/components/providers/LocaleContext";
@@ -70,41 +70,17 @@ export function LogoutDialog({
 }
 
 /**
- * A figure resting on a bench, themed with the app's secondary (indigo) and
- * destructive (red) tokens so the artwork never clashes with the active theme.
+ * Logout glyph set in concentric themed rings, built from the app's destructive
+ * token so it reads as a "sign out" action and matches the theme in both modes.
  */
 function LogoutIllustration() {
   return (
-    <div className="flex h-28 w-28 items-center justify-center rounded-full bg-secondary/10">
-      <svg
-        viewBox="0 0 120 120"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-20 w-20"
-        role="img"
-        aria-hidden="true"
-      >
-        {/* head */}
-        <circle cx="60" cy="34" r="12" className="fill-secondary" />
-        {/* body / shirt */}
-        <path
-          d="M44 78c0-10 7-18 16-18s16 8 16 18v4H44v-4z"
-          className="fill-secondary"
-        />
-        {/* arms resting */}
-        <path
-          d="M44 66c-5 2-8 6-8 12v4h8V66zM76 66c5 2 8 6 8 12v4h-8V66z"
-          className="fill-secondary/70"
-        />
-        {/* legs */}
-        <rect x="50" y="82" width="7" height="18" rx="3.5" className="fill-foreground/80" />
-        <rect x="63" y="82" width="7" height="18" rx="3.5" className="fill-foreground/80" />
-        {/* bench seat */}
-        <rect x="30" y="98" width="60" height="7" rx="3.5" className="fill-destructive" />
-        {/* bench legs */}
-        <rect x="35" y="104" width="5" height="10" rx="2.5" className="fill-destructive/80" />
-        <rect x="80" y="104" width="5" height="10" rx="2.5" className="fill-destructive/80" />
-      </svg>
+    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-destructive/5">
+      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-destructive text-white shadow-sm shadow-destructive/30">
+          <LogOut className="h-6 w-6" />
+        </div>
+      </div>
     </div>
   );
 }
